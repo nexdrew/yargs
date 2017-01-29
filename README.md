@@ -1086,12 +1086,12 @@ require('yargs')
     'run': {
       alias: 'r',
       describe: 'run your program',
-      demand: true
+      demandOption: true
     },
     'path': {
       alias: 'p',
       describe: 'provide a path to file',
-      demand: true
+      demandOption: true
     },
     'spec': {
       alias: 's',
@@ -1413,7 +1413,7 @@ var argv = require('yargs')
   .option('option', {
     alias: 'o',
     describe: "'tis a mighty fine option",
-    demand: true
+    demandOption: true
   })
   .command('run', "Arrr, ya best be knowin' what yer doin'")
   .example('$0 run foo', "shiver me timbers, here's an example for ye")
@@ -1530,7 +1530,7 @@ For example:
 var argv = require('yargs')
     .option('f', {
         alias: 'file',
-        demand: true,
+        demandOption: true,
         default: '/etc/passwd',
         describe: 'x marks the spot',
         type: 'string'
@@ -1559,7 +1559,7 @@ var argv = require('yargs')
     .options({
       'f': {
         alias: 'file',
-        demand: true,
+        demandOption: true,
         default: '/etc/passwd',
         describe: 'x marks the spot',
         type: 'string'
