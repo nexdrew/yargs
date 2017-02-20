@@ -1440,6 +1440,13 @@ describe('yargs dsl tests', function () {
       argv.a.should.equal(80)
       argv.b.should.equals('riffiwobbles')
     })
+
+    it('should apply extended configurations from cwd when no path is given', function () {
+      var argv = yargs('', 'test/fixtures/extends/packageA').pkgConf('foo').argv
+
+      argv.a.should.equal(80)
+      argv.b.should.equals('riffiwobbles')
+    })
   })
 
   describe('skipValidation', function () {
